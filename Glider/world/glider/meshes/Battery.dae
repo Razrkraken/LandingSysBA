@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.90.1 commit date:2020-09-23, commit time:06:43, hash:3e85bb34d0d7</authoring_tool>
+    </contributor>
+    <created>2020-09-28T14:26:10</created>
+    <modified>2020-09-28T14:26:10</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Light-light" name="Light">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <soft sid="soft" type="float">3</soft>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images/>
+  <library_geometries>
+    <geometry id="Battery-mesh" name="Battery">
+      <mesh>
+        <source id="Battery-mesh-positions">
+          <float_array id="Battery-mesh-positions-array" count="168">-0.247 0.01046937 0.001564681 -0.247 -0.01046937 0.001564681 -0.173 0.01046937 0.001564681 -0.173 -0.01046937 0.001564681 -0.1708787 0.01046937 6.86003e-4 -0.1708787 -0.01046937 6.86003e-4 -0.17 0.01046937 -0.001435279 -0.17 -0.01046937 -0.001435279 -0.173 -0.0125907 6.86003e-4 -0.173 -0.01346939 -0.001435279 -0.1715 -0.01196938 6.86003e-4 -0.1708787 -0.0125907 -0.001435279 -0.247 -0.01346939 -0.001435279 -0.247 -0.0125907 6.86003e-4 -0.2491213 -0.01046937 6.86003e-4 -0.25 -0.01046937 -0.001435279 -0.2485 -0.01196938 6.86003e-4 -0.2491213 -0.0125907 -0.001435279 -0.2491213 0.01046937 6.86003e-4 -0.25 0.01046937 -0.001435279 -0.247 0.0125907 6.86003e-4 -0.247 0.01346939 -0.001435279 -0.2485 0.01196938 6.86003e-4 -0.2491213 0.0125907 -0.001435279 -0.173 0.01346939 -0.001435279 -0.173 0.0125907 6.86003e-4 -0.1715 0.01196938 6.86003e-4 -0.1708787 0.0125907 -0.001435279 -0.247 0.01046937 -0.02843528 -0.173 0.01046937 -0.02843528 -0.247 -0.01046937 -0.02843528 -0.173 -0.01046937 -0.02843528 -0.173 0.01346939 -0.02543526 -0.1708787 0.0125907 -0.02543526 -0.17 0.01046937 -0.02543526 -0.17 -0.01046937 -0.02543526 -0.1708787 -0.0125907 -0.02543526 -0.173 -0.01346939 -0.02543526 -0.247 0.01346939 -0.02543526 -0.25 0.01046937 -0.02543526 -0.2491213 0.0125907 -0.02543526 -0.247 -0.01346939 -0.02543526 -0.25 -0.01046937 -0.02543526 -0.2491213 -0.0125907 -0.02543526 -0.1708787 0.01046937 -0.02755659 -0.1708787 -0.01046937 -0.02755659 -0.1715 -0.01196938 -0.02755659 -0.173 -0.0125907 -0.02755659 -0.247 -0.0125907 -0.02755659 -0.2485 -0.01196938 -0.02755659 -0.2491213 -0.01046937 -0.02755659 -0.2491213 0.01046937 -0.02755659 -0.2485 0.01196938 -0.02755659 -0.247 0.0125907 -0.02755659 -0.173 0.0125907 -0.02755659 -0.1715 0.01196938 -0.02755659</float_array>
+          <technique_common>
+            <accessor source="#Battery-mesh-positions-array" count="56" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Battery-mesh-normals">
+          <float_array id="Battery-mesh-normals-array" count="288">0 0 1 0.3826821 0 0.9238802 0.382682 0 0.9238802 0.92388 0 0.3826823 0.9238801 0 0.3826824 0.357407 -0.8628563 0.3574064 0.3574044 -0.8628573 0.3574067 0.8628558 -0.3574001 0.3574144 0.8628552 -0.3574106 0.3574054 0.3779637 -0.1565542 0.912488 0.1565583 -0.3779667 0.9124861 0 -0.9238791 0.3826845 0 -0.9238799 0.3826827 0 -0.3826835 0.9238795 0 -0.3826832 0.9238796 -0.8628556 -0.3574158 0.3573991 -0.8628572 -0.3574002 0.357411 -0.3574067 -0.8628556 0.3574081 -0.3574046 -0.8628576 0.3574055 -0.1565583 -0.3779667 0.9124861 -0.3779632 -0.1565624 0.9124868 -0.3826821 0 0.9238802 -0.382682 0 0.9238802 -0.9238824 0 0.3826768 -0.9238824 0 0.3826768 -0.357407 0.8628563 0.3574064 -0.3574044 0.8628573 0.3574067 -0.8628509 0.3574139 0.3574124 -0.8628606 0.3574016 0.3574016 -0.3779632 0.1565624 0.9124868 -0.1565583 0.3779667 0.9124861 0 0.9238792 0.3826844 0 0.9238798 0.3826828 0 0.3826835 0.9238795 0 0.3826832 0.9238796 0.8628538 0.3574151 0.3574042 0.8628566 0.3574 0.3574126 0.3574019 0.8628597 0.3574032 0.3574081 0.8628548 0.357409 0.1565583 0.3779667 0.9124861 0.3779637 0.1565542 0.912488 0 0 -1 0.3826835 0.9238796 0 0.9238761 0.3826919 0 0.923882 0.3826775 0 1 0 0 0.9238821 -0.3826776 0 0.9238761 -0.3826919 0 0.3826835 -0.9238796 0 0 1 0 -0.9238821 0.3826776 0 -0.923882 0.3826775 0 -0.3826835 0.9238796 0 0 -1 0 -1 0 0 -0.3826835 -0.9238796 0 -0.9238821 -0.3826776 0 -0.923882 -0.3826775 0 0.92388 0 -0.3826823 0.9238797 0 -0.3826832 0.3826835 0 -0.9238796 0.8628489 -0.357429 -0.3574023 0.8628565 -0.3574002 -0.3574128 0.3574062 -0.8628559 -0.3574082 0.3574042 -0.8628578 -0.3574056 0.15656 -0.3779665 -0.9124858 0.3779628 -0.1565624 -0.9124869 0 -0.3826843 -0.9238793 0 -0.3826845 -0.9238791 0 -0.9238797 -0.3826831 0 -0.923879 -0.3826849 -0.3573985 -0.8628639 -0.3573965 -0.3574103 -0.8628519 -0.3574138 -0.8628509 -0.357414 -0.3574125 -0.8628603 -0.3574018 -0.3574018 -0.3779633 -0.1565542 -0.9124881 -0.15656 -0.3779665 -0.9124858 -0.9238824 0 -0.3826768 -0.923882 0 -0.3826776 -0.3826835 0 -0.9238796 -0.8628556 0.3574159 -0.3573992 -0.8628569 0.3574004 -0.3574113 -0.3574062 0.8628559 -0.3574082 -0.3574042 0.8628578 -0.3574056 -0.15656 0.3779665 -0.9124858 -0.3779633 0.1565542 -0.9124881 0 0.3826843 -0.9238793 0 0.3826845 -0.9238791 0 0.9238797 -0.3826831 0 0.923879 -0.3826849 0.3574033 0.8628599 -0.3574013 0.3574069 0.8628548 -0.3574103 0.8628509 0.357414 -0.3574125 0.8628551 0.3574108 -0.3574056 0.3779628 0.1565624 -0.9124869 0.15656 0.3779665 -0.9124858</float_array>
+          <technique_common>
+            <accessor source="#Battery-mesh-normals-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Battery-mesh-vertices">
+          <input semantic="POSITION" source="#Battery-mesh-positions"/>
+        </vertices>
+        <triangles count="108">
+          <input semantic="VERTEX" source="#Battery-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Battery-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 1 0 3 0 2 0 2 1 3 1 4 1 4 2 3 2 5 2 4 3 5 3 6 3 6 4 5 4 7 4 8 5 9 5 10 5 10 6 9 6 11 6 10 7 11 7 5 7 5 8 11 8 7 8 3 9 10 9 5 9 3 10 8 10 10 10 12 11 9 11 13 11 13 12 9 12 8 12 13 13 8 13 1 13 1 14 8 14 3 14 14 15 15 15 16 15 16 16 15 16 17 16 16 17 17 17 13 17 13 18 17 18 12 18 1 19 16 19 13 19 1 20 14 20 16 20 1 21 0 21 14 21 14 22 0 22 18 22 14 23 18 23 15 23 15 24 18 24 19 24 20 25 21 25 22 25 22 26 21 26 23 26 22 27 23 27 18 27 18 28 23 28 19 28 0 29 22 29 18 29 0 30 20 30 22 30 24 31 21 31 25 31 25 32 21 32 20 32 25 33 20 33 2 33 2 34 20 34 0 34 4 35 6 35 26 35 26 36 6 36 27 36 26 37 27 37 25 37 25 38 27 38 24 38 2 39 26 39 25 39 2 40 4 40 26 40 28 41 29 41 30 41 30 41 29 41 31 41 32 42 24 42 33 42 33 42 24 42 27 42 33 43 27 43 34 43 34 44 27 44 6 44 34 45 6 45 35 45 6 45 7 45 35 45 35 46 7 46 36 46 36 47 7 47 11 47 36 48 11 48 37 48 37 48 11 48 9 48 24 49 32 49 21 49 21 49 32 49 38 49 39 50 19 50 40 50 40 51 19 51 23 51 40 52 23 52 38 52 38 52 23 52 21 52 12 53 41 53 9 53 9 53 41 53 37 53 42 54 15 54 39 54 15 54 19 54 39 54 41 55 12 55 43 55 43 55 12 55 17 55 43 56 17 56 42 56 42 57 17 57 15 57 34 58 35 58 44 58 44 59 35 59 45 59 44 60 45 60 29 60 29 60 45 60 31 60 45 61 35 61 46 61 46 62 35 62 36 62 46 63 36 63 47 63 47 64 36 64 37 64 31 65 46 65 47 65 31 66 45 66 46 66 30 67 31 67 48 67 48 68 31 68 47 68 48 69 47 69 41 69 41 70 47 70 37 70 48 71 41 71 49 71 49 72 41 72 43 72 49 73 43 73 50 73 50 74 43 74 42 74 30 75 49 75 50 75 30 76 48 76 49 76 42 77 39 77 50 77 50 78 39 78 51 78 50 79 51 79 30 79 30 79 51 79 28 79 51 80 39 80 52 80 52 81 39 81 40 81 52 82 40 82 53 82 53 83 40 83 38 83 28 84 52 84 53 84 28 85 51 85 52 85 29 86 28 86 54 86 54 87 28 87 53 87 54 88 53 88 32 88 32 89 53 89 38 89 54 90 32 90 55 90 55 91 32 91 33 91 55 92 33 92 44 92 44 93 33 93 34 93 29 94 55 94 44 94 29 95 54 95 55 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Battery" name="Battery" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Battery-mesh" name="Battery"/>
+      </node>
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054208 -0.6141704 -6.925791 0 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="Light" name="Light" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light-light"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

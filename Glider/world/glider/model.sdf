@@ -1,0 +1,509 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <model name="SUAV_glider">
+
+        <pose>0 0 0.06 0 0 0</pose>
+
+        <link name="fuselage">
+            <inertial>
+                <mass>0.278</mass>
+                <inertia>
+                    <ixx>0.0002467</ixx>
+                    <ixy>0.0</ixy>
+                    <iyy>0.011</iyy>
+                    <ixz>-0.0001833</ixz>
+                    <iyz>0.0</iyz>
+                    <izz>0.011</izz>
+                </inertia>
+                <pose>-0.391 0 -0.009 0 0 0</pose>
+                <!-- todo: pose of Fuselage -->
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Fuselage.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Fuselage.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+            <sensor type="imu" name="IMU_Fuselage">
+                <always_on>true</always_on>
+                <update_rate>10</update_rate>
+                <frame name="IMU_frame">
+                    <pose>3.14159 0 0 0 0 0</pose>
+                </frame>
+            </sensor>
+
+            <!-- Debug - Centers of pressure -->
+            <!--<visual name="cp_left_wing">
+              <pose>-1 2.205 1.5 0 0 0</pose>
+              <geometry>
+                <sphere><radius>0.1</radius></sphere>
+              </geometry>
+            </visual>
+
+            <visual name="cp_right_wing">
+              <pose>-1 -2.205 1.5 0 0 0</pose>
+              <geometry>
+                <sphere><radius>0.1</radius></sphere>
+              </geometry>
+            </visual>
+
+            <visual name="cp_elevator">
+              <pose>-5.45 0 0.55 0 0 0</pose>
+              <geometry>
+                <sphere><radius>0.1</radius></sphere>
+              </geometry>
+            </visual>
+
+            <visual name="cp_rudder">
+              <pose>-6 0 1.55 0 0 0</pose>
+              <geometry>
+                <sphere><radius>0.1</radius></sphere>
+              </geometry>
+            </visual>-->
+
+        </link>
+
+        <link name="left_wing">
+            <inertial>
+                <mass>0.144</mass>
+                <inertia>
+                    <ixx>0.008</ixx>
+                    <ixy>0.0002962</ixy>
+                    <iyy>0.0003079</iyy>
+                    <ixz>-0.00001643</ixz>
+                    <izz>0.008</izz>
+                    <iyz>-0.00009843</iyz>
+                </inertia>
+                <pose>-0.357 0.412 0.015 0 0 0</pose>
+<!--                Todo: Pose left Wing-->
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/LeftWing.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/LeftWing.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="right_wing">
+
+            <inertial>
+                <mass>0.144</mass>
+                <inertia>
+                    <ixx>0.008</ixx>
+                    <ixy>-0.0002962</ixy>
+                    <iyy>0.0003079</iyy>
+                    <ixz>-0.00001643</ixz>
+                    <izz>0.008</izz>
+                    <iyz>0.00009843</iyz>
+                </inertia>
+                <pose>-0.357 -0.412 0.015 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/RightWing.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/RightWing.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="left_aileron">
+
+            <inertial>
+                <mass>0.007</mass>
+                <inertia>
+                    <ixx>0.00008872</ixx>
+                    <ixy>-0.0000003134</ixy>
+                    <iyy>0.0000006893</iyy>
+                    <ixz>-0.0000001392</ixz>
+                    <izz>0.0000892</izz>
+                    <iyz>-0.0000007497</iyz>
+                </inertia>
+                <pose>-0.447 0.505 0 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/LeftAileron.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/LeftAileron.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="right_aileron">
+
+            <inertial>
+                <mass>0.007</mass>
+                <inertia>
+                    <ixx>0.00008872</ixx>
+                    <ixy>0.0000003134</ixy>
+                    <iyy>0.0000006893</iyy>
+                    <ixz>-0.0000001392</ixz>
+                    <izz>0.0000892</izz>
+                    <iyz>0.0000007497</iyz>
+                </inertia>
+                <pose>-0.447 -0.505 0 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/RightAileron.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/RightAileron.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="elevator">
+
+            <inertial>
+                <mass>0.006</mass>
+                <inertia>
+                    <ixx>0.00004168</ixx>
+                    <ixy>0.0</ixy>
+                    <iyy>0.0000003395</iyy>
+                    <ixz>-0.00000002188</ixz>
+                    <izz>0.00004197</izz>
+                    <iyz>0.0</iyz>
+                </inertia>
+                <pose>-0.99 0 0.015 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Elevator.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Elevator.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="rudder">
+
+            <inertial>
+                <mass>0.011</mass>
+                <inertia>
+                    <ixx>0.00005019</ixx>
+                    <ixy>0.0</ixy>
+                    <iyy>0.00005215</iyy>
+                    <ixz>-0.000001705</ixz>
+                    <izz>0.000002054</izz>
+                    <iyz>0.0</iyz>
+                </inertia>
+                <pose>-0.998 0 0.084 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Rudder.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Rudder.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="battery">
+
+            <inertial>
+                <mass>0.15</mass>
+                <inertia>
+                    <ixx>0.00001982</ixx>
+                    <ixy>0.0</ixy>
+                    <iyy>0.00008976</iyy>
+                    <ixz>0</ixz>
+                    <izz>0.00008764</izz>
+                    <iyz>0.0</iyz>
+                </inertia>
+                <pose>-0.21 0 -0.013 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Battery.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/Battery.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="vertical_stab">
+
+            <inertial>
+                <mass>0.024</mass>
+                <inertia>
+                    <ixx>0.00009841</ixx>
+                    <ixy>0.0</ixy>
+                    <iyy>0.0001291</iyy>
+                    <ixz>0.0000281</ixz>
+                    <izz>0.00003255</izz>
+                    <iyz>0.0</iyz>
+                </inertia>
+                <pose>-0.922 0 0.02 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/VerticalStab.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/VerticalStab.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <link name="horizontal_stab">
+
+            <inertial>
+                <mass>0.017</mass>
+                <inertia>
+                    <ixx>0.000258</ixx>
+                    <ixy>-0.000000002606</ixy>
+                    <iyy>0.000005753</iyy>
+                    <ixz>-0.0000003871</ixz>
+                    <izz>0.0002635</izz>
+                    <iyz>0.0</iyz>
+                </inertia>
+                                <pose>-0.957 0 0.018 0 0 0</pose>
+            </inertial>
+
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/HorizontalStab.dae</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://glider/meshes/HorizontalStab.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+
+        </link>
+
+        <!-- Joint to fix Left Wing to Fuselage -->
+        <joint name='leftWing_fix' type='fixed'>
+            <parent>fuselage</parent>
+            <child>left_wing</child>
+        </joint>
+
+        <!-- Joint to fix Right Wing to Fuselage -->
+        <joint name='rightWing_fix' type='fixed'>
+            <parent>fuselage</parent>
+            <child>right_wing</child>
+        </joint>
+
+        <!-- Joint to fix vertical Stabilizer to Fuselage -->
+        <joint name='verticalStab_fix' type='fixed'>
+            <parent>fuselage</parent>
+            <child>vertical_stab</child>
+        </joint>
+
+        <!-- Joint to fix horizontal Stabilizer to Fuselage -->
+        <joint name='horizStab_fix' type='fixed'>
+            <parent>fuselage</parent>
+            <child>horizontal_stab</child>
+        </joint>
+
+        <!-- Joint to fix horizontal Stabilizer to Fuselage -->
+        <joint name='battery_fix' type='fixed'>
+            <parent>fuselage</parent>
+            <child>battery</child>
+        </joint>
+
+        <!-- Joint to move the left aileron -->
+        <joint name='left_aileron_joint' type='revolute'>
+            <parent>fuselage</parent>
+            <child>left_aileron</child>
+            <pose>-0.430535 0.336373 0.003041 0 0 0</pose>
+            <axis>
+                <xyz>0.009390997635938725 -0.9998917482902826 -0.011326997148576077</xyz>
+                <limit>
+                    <!-- -30/+30 deg. -->
+                    <lower>-0.53</lower>
+                    <upper>0.53</upper>
+                    <effort>-1</effort>
+                    <velocity>-1</velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.01000</damping>
+                </dynamics>
+            </axis>
+            <physics>
+                <ode>
+                    <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+
+        <!-- Joint to move the right aileron -->
+        <joint name='right_aileron_joint' type='revolute'>
+            <parent>fuselage</parent>
+            <child>right_aileron</child>
+            <pose>-0.430535 -0.336373 0.003041 0 0 0</pose>
+            <axis>
+                <xyz>0.009390997635938725 0.9998917482902826 -0.011326997148576077</xyz>
+                <limit>
+                    <!-- -30/+30 deg. -->
+                    <lower>-0.53</lower>
+                    <upper>0.53</upper>
+                    <effort>-1</effort>
+                    <velocity>-1</velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.01000</damping>
+                </dynamics>
+            </axis>
+            <physics>
+                <ode>
+                    <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+
+        <!-- Joint to move the elevator -->
+        <joint name='elevator_joint' type='revolute'>
+            <parent>fuselage</parent>
+            <child>elevator</child>
+            <pose>-0.976932 -0.151331 0.015941 0 0 0</pose>
+            <axis>
+                <xyz>0 1 0</xyz>
+                <limit>
+                    <!-- -30/+30 deg. -->
+                    <lower>-0.349</lower>
+                    <upper>0.349</upper>
+                    <effort>-1</effort>
+                    <velocity>-1</velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.01000</damping>
+                </dynamics>
+            </axis>
+            <physics>
+                <ode>
+                    <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+
+        <!-- Joint to move the rudder -->
+        <joint name='rudder_joint' type='revolute'>
+            <parent>fuselage</parent>
+            <child>rudder</child>
+            <pose> -0.976305 0 0.223558 0 0 0 </pose>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <!-- -30/+30 deg. -->
+                    <lower>-0.53</lower>
+                    <upper>0.53</upper>
+                    <effort>-1</effort>
+                    <velocity>-1</velocity>
+                </limit>
+                <dynamics>
+                    <damping>0.01000</damping>
+                </dynamics>
+            </axis>
+            <physics>
+                <ode>
+                    <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+
+        <plugin name="GliderPlugin" filename="cmake-build-debug/libglider.so">
+            <initial_vel>15 0 0</initial_vel>
+        </plugin>
+
+    </model>
+</sdf>
